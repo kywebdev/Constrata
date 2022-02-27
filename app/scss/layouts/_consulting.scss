@@ -1,0 +1,322 @@
+.consulting, .digital {
+    padding-top: 210px;
+    background-color: #0E1B32;
+
+    @media screen and (max-width: $large) {
+        padding-top: 130px;
+    }
+    .curve-bg {
+        top: -300px;
+
+        @media screen and (max-width: $small) {
+            top: -435px;
+        }
+    }
+    h1 {
+        max-width: 700px;
+        margin-bottom: 120px;
+        margin-left: 100px;
+
+        @media screen and (max-width: $large) {
+            margin-left: 0px;
+        }
+        @media screen and (max-width: $medium) {
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+        @media screen and (max-width: $small) {
+            margin-bottom: 60px;
+        }
+    }
+    .sectors {
+        margin-top: 80px;
+        padding-bottom: 0px;
+
+        .container {
+            @media screen and (max-width: $medium) {
+                width: 100%;
+            }
+        }
+        &__sector {
+            &__text {
+                > div {
+                    max-width: 440px;
+                }
+            }
+        }
+    }
+    .our-team__slider {
+        margin-bottom: 150px;
+
+        @media screen and (max-width: $small) {
+            margin-bottom: 90px;
+        }
+    }
+}
+.service-offerings {
+    background-color: $white;
+    padding: 370px 0px 120px;
+    margin: -170px 0px -120px;
+
+    @media screen and (max-width: $small) {
+        padding: 370px 0px 100px;
+        margin: -200px 0px -100px;
+    }
+    .container {
+        max-width: 1180px;
+
+        &:first-of-type {
+            @media screen and (max-width: $small) {
+                width: 100%;
+            }
+        }
+    }
+    h3 {
+        font-size: 30px;
+        line-height: 30px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid #CECECE;
+        margin-bottom: 60px;
+
+        @media screen and (max-width: $small) {
+            font-size: 25px;
+            padding: 0px 5% 15px;
+            border-bottom: 2px solid #E4E4E4;
+            margin-bottom: 45px;
+        }
+    }
+    &__slider {
+        position: relative;
+
+        .slick-list {
+            margin: 0px -20px;
+        }
+        .slick-slide {
+            margin: 0px 20px;
+        }
+        .slick-prev, .slick-next {
+            position: absolute;
+            background-color: transparent;
+            border: none;
+            padding: 0px;
+            font-size: 0px;
+            width: 17px;
+            height: 17px;
+            outline: none;
+            transition: .3s ease-in-out;
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 17px;
+                height: 17px;
+                background-image: url('../img/blue-arrow-right.svg');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+        .slick-prev {
+            top: -105px;
+            right: 57px;
+
+            @media screen and (max-width: $small) {
+                top: -85px;
+                right: calc(5% + 57px);
+            }
+            &:after {
+                transform: rotate(180deg);
+            }
+        }
+        .slick-next {
+            top: -105px;
+            right: 0px;
+
+            @media screen and (max-width: $small) {
+                top: -85px;
+                right: 5%;
+            }
+        }
+        .slick-disabled {
+            opacity: .3;
+        }
+    }
+    &__offerings {
+        margin: 0px 0px 120px 25px;
+
+        @media screen and (max-width: $small) {
+            padding: 0px 5%;
+            margin: 0px 0px 90px 25px;
+        }
+        li {
+            font-size: 18px;
+            line-height: 28px;
+            margin-bottom: 25px;
+        }
+    }
+}
+.leadership {
+    display: flex;
+	flex-wrap: wrap;
+    margin-bottom: 150px;
+
+    @media screen and (max-width: $medium) {
+        display: block;
+    }
+    @media screen and (max-width: $small) {
+        margin-bottom: 90px;
+    }
+    &__img {
+		width: 100%;
+		max-width: 417px;
+        margin-right: 60px;
+
+        @media screen and (max-width: $medium) {
+            margin-right: 0px;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        @media screen and (max-width: $medium) {
+            margin: 0px 0px 50px;
+        }
+        @media screen and (max-width: $small) {
+            width: 90%;
+            margin: 0px 5% 30px;
+        }
+        img {
+            @media screen and (max-width: $medium) {
+                max-width: 100%;
+            }
+        }
+    }
+    &__text {
+		width: calc(100% - 477px);
+
+        @media screen and (max-width: $medium) {
+            width: 100%;
+        }
+        @media screen and (max-width: $small) {
+            width: 90%;
+            margin: 0px 5%;
+        }
+        p {
+            font-size: 18px;
+            line-height: 35px;
+            margin-bottom: 30px;
+    
+            strong {
+                display: block;
+                margin-top: 60px;
+            }
+        }
+        span {
+            display: block;
+            margin-top: -38px;
+            font-size: 14px;
+        }
+    }
+}
+.related-posts {
+    .row {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    .col-md-4 {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    h3 {
+        border-bottom: none;
+        padding-bottom: 0px;
+        margin-bottom: 40px;
+
+        @media screen and (max-width: $small) {
+            padding: 0px;
+        }
+    }
+    &__slider {
+        position: relative;
+
+        .slick-list {
+            margin: 0px -20px;
+        }
+		.slick-track {
+			margin-left: 0px;
+			margin-right: 0px;
+		}
+        .slick-slide {
+            margin: 0px 20px;
+        }
+        .slick-prev, .slick-next {
+            position: absolute;
+            background-color: transparent;
+            border: none;
+            padding: 0px;
+            font-size: 0px;
+            width: 17px;
+            height: 17px;
+            outline: none;
+            transition: .3s ease-in-out;
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 17px;
+                height: 17px;
+                background-image: url('../img/blue-arrow-right.svg');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+        .slick-prev {
+            top: -63px;
+            right: 57px;
+
+            &:after {
+                transform: rotate(180deg);
+            }
+        }
+        .slick-next {
+            top: -63px;
+            right: 0px;
+        }
+        .slick-disabled {
+            opacity: .3;
+        }
+        a {
+            display: block;
+            color: $black;
+            
+            &:hover, &:focus {
+                color: $light-blue !important;
+
+                .related-posts__slider__img {
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            &:after {
+                display: none;
+            }
+        }
+        &__img {
+            margin-bottom: 20px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                transform: scale(1);
+                transition: .5s ease;
+            }
+        }
+        h2 {
+            font-size: 22px;
+            line-height: 25px;
+            margin-bottom: 0px;
+        }
+    }
+}

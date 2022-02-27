@@ -1,0 +1,55 @@
+.services {
+    padding-top: 210px;
+    background-color: #EEEEEE;
+
+    @media screen and (max-width: $large) {
+        padding-top: 130px;
+    }
+    .curve-bg {
+        top: -300px;
+
+        @media screen and (max-width: $small) {
+            top: -435px;
+        }
+    }
+    h1 {
+        max-width: 700px;
+        margin-bottom: 120px;
+        margin-left: 100px;
+
+        @media screen and (max-width: $large) {
+            margin-left: 0px;
+        }
+        @media screen and (max-width: $medium) {
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+        @media screen and (max-width: $small) {
+            margin-bottom: 60px;
+        }
+    }
+    .sectors {
+        margin-top: 80px;
+        padding-bottom: 0px;
+
+        .container {
+            @media screen and (max-width: $medium) {
+                width: 100%;
+            }
+        }
+        &__sector {
+            &__text {
+                > div {
+                    max-width: 440px;
+                }
+            }
+        }
+    }
+    .our-team__slider {
+        margin-bottom: 150px;
+
+        @media screen and (max-width: $small) {
+            margin-bottom: 90px;
+        }
+    }
+}

@@ -1,0 +1,351 @@
+* {
+    box-sizing: border-box !important;
+}
+body {
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto;
+    font-family: $raleway;
+    font-size: 16px;
+    line-height: 30px;
+    color: $black;
+    overflow-x: hidden !important;
+}
+.browserupgrade {
+    width: 100%;
+    padding: 20px;
+    z-index: 100;
+    text-align: center;
+    margin-bottom: 0px;
+    position: fixed;
+    top: 0px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    margin-top: 0px;
+}
+h1 {
+    font-size: 65px;
+    line-height: 70px;
+    color: $green;
+
+    @media screen and (max-width: $small) {
+        font-size: 40px;
+        line-height: 45px;
+    }
+}
+h2 {
+    font-size: 45px;
+    line-height: 55px;
+}
+h3 {
+    font-size: 20px;
+    line-height: 30px;
+}
+a {
+    color: $light-blue;
+    font-weight: 600;
+    position: relative;
+    outline: none;
+    transition: .3s ease-in-out;
+
+    &:hover, &:focus {
+        text-decoration: none;
+        color: $green !important;        
+    }
+	&:focus {
+		outline: none !important;
+	}
+	&.ab-item {
+		&:hover, &:focus {
+			color: $white !important;        
+		}
+	}
+}
+main {
+    padding-bottom: 120px;
+
+    @media screen and (max-width: $small) {
+        padding-bottom: 100px;
+    }
+	a {
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: -3px;
+			left: 0px;
+			width: 100%;
+			height: 1px;
+			background-color: $light-blue;
+			transition: .3s ease-in-out;
+		}
+		&:hover, &:focus {
+			&:after {
+				background-color: $green !important;
+			}
+		}
+	}
+    ul, ol {
+        li {
+            list-style-type: none;
+            position: relative;
+            font-size: 16px;
+            line-height: 30px;
+        }
+    }
+    ul {
+        margin: 0px 0px 1em 50px;
+        padding: 0px;
+
+        li {
+            &:before {
+                content: '';
+                width: 6px;
+                height: 6px;
+                border-radius: 3px;
+                background-color: $light-blue;
+                position: absolute;
+                top: 13px;
+                left: -25px;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    ol {
+        margin: 0px 0px 1em 25px;
+        padding: 0px;
+
+        li {
+            counter-increment: inst;
+
+            &:before {
+                content: counter(inst)'.';
+                color: $light-blue;
+                margin-right: 15px;
+            }
+        }
+    }
+    blockquote {
+        padding: 15px 0px 15px 120px;
+        margin: 50px auto !important;
+        font-size: 20px !important;
+        line-height: 45px !important;
+        font-weight: 500;
+        font-style: italic;
+        position: relative;
+        
+        @media screen and (max-width: $medium) {
+            padding: 15px 0px 15px 80px;
+        }
+        @media screen and (max-width: $small) {
+            padding: 10px 0px 10px 25px;
+            margin: 35px auto !important;
+            font-size: 14px !important;
+            line-height: 33px !important;
+        }
+        &:before {
+            content: '';
+            display: block;
+            width: 3px;
+            height: 100%;
+            background-color: $light-blue;
+            position: absolute;
+            top: 0px;
+            left: 58px;
+
+            @media screen and (max-width: $medium) {
+                left: 38px;
+            }
+            @media screen and (max-width: $small) {
+                left: 0px;
+            }
+        }
+		p {
+			max-width: none !important;
+			margin: 0px !important;
+			font-size: 20px !important;
+			line-height: 45px !important;
+		}
+    }
+}
+.container {
+    max-width: 1120px;
+    width: 90%;
+    margin: 0px auto;
+    padding: 0px;
+}
+.page, .post {
+	margin: 0px;
+}
+.page-template-default {
+	@extend .light-header;
+    margin-top: 0px;
+
+    .hero {
+        min-height: auto;
+        background-color: #0E1B32;
+        padding: 240px 0px 180px;
+        position: relative;
+
+        @media screen and (max-width: $large) {
+            padding: 200px 0px;
+        }
+        @media screen and (max-width: $small) {
+            padding: 150px 0px 130px;
+        }
+        h1 {
+            margin-bottom: 0px;
+        }
+    }
+    .page-content {
+        padding-top: 120px;
+		margin: 0px;
+
+        @media screen and (max-width: $small) {
+            padding-top: 100px;
+        }
+		.container {
+			h1, h2, h3, h4, h5, h6 {
+				&:first-child {
+					margin-top: 0px;
+				}
+			}
+		}
+		h1, h2, h3, h4, h5, h6 {
+			margin: 40px auto 1rem;
+		}
+		h1 {
+			font-size: 55px;
+			line-height: 60px;
+		}
+		h2 {
+			font-size: 45px;
+			line-height: 55px;
+		}
+		h3 {
+			font-size: 35px;
+			line-height: 45px;
+		}
+		h4 {
+			font-size: 25px;
+			line-height: 35px;
+		}
+		h5 {
+			font-size: 22px;
+			line-height: 32px;
+		}
+		h6 {
+			font-size: 20px;
+			line-height: 30px;
+		}
+        p, ol, ul, li {
+            font-size: 18px;
+            line-height: 32px;
+
+            @media screen and (max-width: $small) {
+                font-size: 16px;
+                line-height: 30px;
+            }
+        }
+		a {
+			color: $light-blue;
+			text-decoration: underline;
+	
+			&:after {
+				display: none;
+			}
+		}
+    }
+}
+.error-page {
+    .hero {
+        min-height: auto;
+        background-color: #0E1B32;
+        padding: 315px 0px 210px;
+        position: relative;
+
+        @media screen and (max-width: $large) {
+            padding: 240px 0px 210px;
+        }
+        @media screen and (max-width: $small) {
+            padding: 170px 0px 130px;
+        }
+        h1 {
+            margin-bottom: 0px;
+        }
+        p {
+            color: $white;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            font-size: 24px;
+            line-height: 36px;
+
+            @media screen and (max-width: $small) {
+                margin-top: 30px;
+                font-size: 18px;
+                line-height: 30px;
+            }
+        }
+        a {
+			color: $light-blue;
+            font-size: 22px;
+
+            @media screen and (max-width: $small) {
+                font-size: 18px;
+            }
+        }
+    }
+    main {
+        padding: 0px;
+    }
+}
+.tooltip.show {
+    opacity: 1;
+}
+.tooltip .arrow {
+    left: 25px !important;
+
+    @media screen and (max-width: 634px) {
+        left: 5% !important;
+    }
+    @media screen and (max-width: 480px) {
+        left: 25px !important;
+    }
+}
+.tooltip-inner {
+    max-width: 400px !important;
+    text-align: left !important;
+    background-color: $blue !important;
+    font-family: $raleway;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 15px 20px !important;
+    border-radius: 0px !important;
+
+    @media screen and (max-width: 1430px) {
+        max-width: 300px !important;
+    }
+    @media screen and (max-width: 634px) {
+        max-width: 95% !important;
+    }
+    @media screen and (max-width: 480px) {
+        max-width: 93% !important;
+    }
+}
+.bs-tooltip-top, .bs-tooltip-auto[x-placement^="top"] {
+    padding: 0px !important;
+    top: -10px !important;
+}
+.bs-tooltip-top .arrow::before, .bs-tooltip-auto[x-placement^="top"] .arrow::before {
+    border-top-color: $blue !important;
+    top: 6px !important;
+    border-width: .5rem .5rem 0 !important;
+}
+.bs-tooltip-bottom, .bs-tooltip-auto[x-placement^="bottom"] {
+    padding: 0px !important;
+    top: 10px !important;
+}
+.bs-tooltip-bottom .arrow::before, .bs-tooltip-auto[x-placement^="bottom"] .arrow::before {
+    border-bottom-color: $blue !important;
+    bottom: 6px !important;
+    border-width: 0 .5rem .5rem !important;
+}

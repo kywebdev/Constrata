@@ -1,0 +1,30 @@
+body {
+	background: #0052CC;
+}
+.login h1 a {
+	background-image: url('../img/logo-white.png');
+	background-size: 138px;
+	width: 138px;
+	height: 19px;
+	margin: 0px auto 40px;
+	box-shadow: none;
+	pointer-events: none;
+}
+.login #backtoblog a, .login #nav a, .login #backtoblog a:hover, .login #nav a:hover, .login #backtoblog a:focus, .login #nav a:focus {
+	color: white;
+}
+.login #backtoblog a:hover, .login #nav a:hover, .login #backtoblog a:focus, .login #nav a:focus {
+	text-decoration: underline;
+	box-shadow: none;
+}
+.wp-core-ui .button-primary {
+	background: #8CC449;
+	border-color: #8CC449;
+}
+.wp-core-ui .button-primary.focus, .wp-core-ui .button-primary.hover, .wp-core-ui .button-primary:focus, .wp-core-ui .button-primary:hover {
+	background: #79b72f;
+	border-color: #79b72f;
+}
+.wp-core-ui .button-primary.focus, .wp-core-ui .button-primary:focus {
+	box-shadow: 0 0 0 1px #fff, 0 0 0 3px #79b72f
+}
